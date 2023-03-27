@@ -34,8 +34,7 @@ Conversion notes:
 ---
 
 
-## 
-**   Overview**
+## **   Overview**
 
 In this project, we use supervised learning techniques to classify non profit donors as mid-level and high level donors. This classification will allow nonprofits to better compete for the attention of high-level donors, many of which can provide tremendous benefits when relationships are cultivated personably, and allow organizations to better allocate their time for fundraising ultimately to help more people. The data is collected and explored first, and pre-processing techniques are used to manipulate the data to a format which is workable for our use case. Several supervised learning models are trained and evaluated on the pre-processed data and a best suited model was selected based on the performance of the models.
 
