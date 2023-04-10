@@ -152,33 +152,55 @@ def main():
     Welcome to the App which predicts Income Levels
     ''')
 
-    age = st.slider('Age', min_value=17, max_value=80, value=27, step=1)
+    age_col, education_col, workclass_col = st.columns(3)
+    sex_col, maritalstatus_col, nativecountry_col = st.columns(3)
 
-    maritalstatus = st.selectbox(
-        'Marital Status',
-        ('Single', 'Married'))
+    # age = st.slider('Age', min_value=17, max_value=80, value=27, step=1)
+    with age_col:
+        age = age_col.slider('**Age**', min_value=17, max_value=80, value=27, step=1)
 
-    sex = st.selectbox(
-        'Sex',
-        ('Female', 'Male'))
+    with maritalstatus_col:
+        maritalstatus = maritalstatus_col.selectbox(
+            '**Marital Status**',
+            ('Single', 'Married'))
 
-    workclass = st.selectbox(
-        'Workclass',
-        ('Private', 'Government', 'Self-emp', 'No-income'))
+    with sex_col:
+        sex = sex_col.selectbox(
+            '**Sex**',
+            ('Female', 'Male'))
 
+    workclass_map = {'Private': 'Private', 'Government': 'Government',
+                     'Self employed': 'Self-emp', 'No income': 'No-income'}
+    with workclass_col:
+        workclass = workclass_col.selectbox(
+            '**Workclass**',
+            ('Private', 'Government', 'Self employed', 'No income'))
+        workclass = workclass_map[workclass]
 
-    nativecountry = st.selectbox(
-        'Native Country',
-        ('United-States', 'Non-US'))
+    nativecountry_map = {'United States': 'United-States', 'Non-US': 'Non-US'}
+    with nativecountry_col:
+        nativecountry = nativecountry_col.selectbox(
+                        '**Native Country**',
+                        ('United States', 'Non-US'))
+        nativecountry = nativecountry_map[nativecountry]
 
-    education = st.selectbox(
-        'Education',
-        ('HS', 'Bachelors', 'DNF HS', 'Assoc', 'Masters', 'Prof-school', 'Doctorate'))
+    education_map = {'High School': 'HS', 'Bachelors': 'Bachelors',
+                     'DNF HS': 'Did not finish high school', 'Associate': 'Assoc',
+                     'Masters': 'Masters', 'Prof-school': 'Prof-school',
+                     'Doctorate': 'Doctorate'}
 
-    if st.button('Submit'):
+    with education_col:
+        education = education_col.selectbox(
+            '**Education**',
+            ('High School', 'Bachelors', 'Did not finish high school', 'Associate',
+             'Masters', 'Prof-school', 'Doctorate'))
+        education = education_map[education]
+
+    out_map = {'Mid-Level': 'Mid level', 'High-Level': 'High level'}
+    if st.button('**Submit**'):
         out = predict_income(age, maritalstatus, sex, workclass, nativecountry, education)
-        st.markdown(out)
+        st.markdown(out_map[out[0]])
+
 
 if __name__ == '__main__':
     main()
-
