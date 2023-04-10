@@ -204,14 +204,16 @@ def main():
              'Masters', 'Prof-school', 'Doctorate'))
         education = education_map[education]
 
-    out_map = {'Mid-Level': 'Mid level', 'High-Level': 'High level'}
+    out_map = {'Mid-Level': 'The predicted income is in the Mid level for the given input fields.',
+               'High-Level': 'The predicted income is in the High level for the given input fields.'}
     if st.button('**Submit**'):
         out = predict_income(age, maritalstatus, sex, workclass, nativecountry, education)
         st.markdown(out_map[out[0]])
     st.markdown('''
     The application will provide a classification of "High-Level" for any individual who is 
     likely to be able to contribute a large donation, or Mid-Level" for an individual who is 
-    likely to only be able to contribute a smaller contribution.''')
+    likely to only be able to contribute a smaller contribution.
+    Thank you for using our app, and we hope it was helpful''')
 
 
 if __name__ == '__main__':
