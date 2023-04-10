@@ -150,7 +150,15 @@ def main():
     st.write('# Income Predictor')
     st.markdown(''' 
     Welcome to the App which predicts Income Levels
-    ''')
+    '''
+                '''
+    This application uses supervised learning techniques to classify potential donors for 
+    non profits as likely to be mid-level or high-level donors. This  will allow nonprofits 
+    to better compete for the attention of high-level donors, many of which can provide 
+    tremendous benefits when relationships are cultivated personably, and allow organizations 
+    to better allocate their time for fundraising ultimately to help more people. To provide a 
+    donor classification, the application will use basic information collected by non profits 
+    when enrolling new volunteers and supporters.''')
 
     age_col, education_col, workclass_col = st.columns(3)
     sex_col, maritalstatus_col, nativecountry_col = st.columns(3)
@@ -200,6 +208,10 @@ def main():
     if st.button('**Submit**'):
         out = predict_income(age, maritalstatus, sex, workclass, nativecountry, education)
         st.markdown(out_map[out[0]])
+    st.markdown('''
+    The application will provide a classification of "High-Level" for any individual who is 
+    likely to be able to contribute a large donation, or Mid-Level" for an individual who is 
+    likely to only be able to contribute a smaller contribution.''')
 
 
 if __name__ == '__main__':
