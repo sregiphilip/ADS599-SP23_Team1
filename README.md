@@ -36,14 +36,13 @@ Conversion notes:
 
 ## **Overview**
 
-In this project, we use supervised learning techniques to classify non profit donors as mid-level and high level donors. This classification will allow nonprofits to better compete for the attention of high-level donors, many of which can provide tremendous benefits when relationships are cultivated personably, and allow organizations to better allocate their time for fundraising ultimately to help more people. The data is collected and explored first, and pre-processing techniques are used to manipulate the data to a format which is workable for our use case. Several supervised learning models are trained and evaluated on the pre-processed data and a best suited model was selected based on the performance of the models.
-
+This application used supervised learning techniques to classify potential non profit donors as midlevel or high-level donors. The applcation aims to allow nonprofits to better compete for the attention of highlevel donors, many of which can provide tremendous benefits when relationships are cultivated personably, and allow organizations to better allocate their time for fundraising ultimately to help more people. 
 
 ## **Getting Started**
 
-The purpose of this analytical research project is to leverage non profit volunteer databases to identify individuals who are likely to be high-level donors. The dataset for this project originates from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Census+Income). The dataset was donated by Ron Kohavi and Barry Becker.
+The dataset for this project originates from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Census+Income). The dataset was donated by Ron Kohavi and Barry Becker.
 
-Our goal is to build a model that accurately predicts whether an individual makes more than 50K. This project will be very helpful for non-profits which survive on donations, knowing an individual’s income will help the organization to understand the amount of donation to request.
+In this dataset, the income field is used to determine if an individual is likely to be a high-level or midlevel donor. Individuals with an income greater than $50,000 are determined to be potential high-level donors and all other individuals are determined to be potential midlevel donors. 
 
 
 ## **EDA and Pre-Processing**
