@@ -34,8 +34,7 @@ Conversion notes:
 ---
 
 
-## 
-**   Overview**
+## **Overview**
 
 In this project, we use supervised learning techniques to classify non profit donors as mid-level and high level donors. This classification will allow nonprofits to better compete for the attention of high-level donors, many of which can provide tremendous benefits when relationships are cultivated personably, and allow organizations to better allocate their time for fundraising ultimately to help more people. The data is collected and explored first, and pre-processing techniques are used to manipulate the data to a format which is workable for our use case. Several supervised learning models are trained and evaluated on the pre-processed data and a best suited model was selected based on the performance of the models.
 
@@ -62,3 +61,7 @@ To build our desired solution for donor selection, we   trained   and   tuned   
 ## **Model Outcome and Deployment**
 
 After the model building and tuning with the five different classification techniques, the best performing models of each technique were then evaluated and compared against each other using a selection performance metrics that include recall, F1, accuracy, precision, and kappa, in that order of significance. After calculating the performance metrics of each of the five models,  the naïve bayes model was chosen given that it had the highest score for recall and the second highest score for F1. Naive Bayes was used to deploy an App, which allows a user to input basic information about an individual, and will then predict if the individual is likely to be a high level or mid level donor.
+
+## **References**
+
+Kohavi, R. & Becker, B (1996). UCI Machine Learning Repository [https://archive.ics.uci.edu/ml/datasets/census+income]. Irvine, CA: University of California, School of Information and Computer Science.
