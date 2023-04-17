@@ -56,9 +56,9 @@ The code and whitepaper of how this application was developed is contained in th
 ### Code Library Folder
 Within the Code Library folder, you will find jupyter notebook files which contain code that was used for exploration and development of the application. 
 
-**EDA_PreProcessing.ipynb** - a jupyter notebook file containing python code detailing the exploratory data analysis and preprocessing steps for this dataset. 
+* EDA_PreProcessing.ipynb - a jupyter notebook file containing python code detailing the exploratory data analysis and preprocessing steps for this dataset. 
 
-**Modeling.ipynb** - a jupyter notebook file containing python code detailing the model building and evaluation steps of this application.
+* Modeling.ipynb - a jupyter notebook file containing python code detailing the model building and evaluation steps of this application.
 
 ###  Image Folder
 The image folder contains various pdf images of plots that were deemed to be significant during the exploratory data analysis of the dataset. These images are for reference to understand the dataset that was used.
