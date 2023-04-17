@@ -41,6 +41,8 @@ This application used supervised learning techniques to classify potential non p
 
 ## **Getting Started**
 
+**The main code file for this research program is listed on the homepage titled <main.ipynb>**
+
 The dataset for this project originates from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Census+Income). The dataset was donated by Ron Kohavi and Barry Becker.
 
 In this dataset, the income field is used to determine if an individual is likely to be a high-level or midlevel donor. Individuals with an income greater than $50,000 are determined to be potential high-level donors and all other individuals are determined to be potential midlevel donors. 
@@ -72,6 +74,8 @@ The data folder contains the csv file of the UCI MLE repository dataset used for
 ### reports
 The reports folder contains a pdf article detailing the purpose of this application and the objective we were attempting solve. Please refer to the article to understand the decision making process of this application.
 
+### main.ipynb
+This jupyter notebook file contains all of the exploration, manipulation, model building, and evaluation that was conducted for this research project. This is the main file for this project.
 
 ## **References**
 
