@@ -193,7 +193,7 @@ def main():
         nativecountry = nativecountry_map[nativecountry]
 
     education_map = {'High School': 'HS', 'Bachelors': 'Bachelors',
-                     'DNF HS': 'Did not finish high school', 'Associate': 'Assoc',
+                     'Did not finish high school': 'DNF HS', 'Associate': 'Assoc',
                      'Masters': 'Masters', 'Prof-school': 'Prof-school',
                      'Doctorate': 'Doctorate'}
 
