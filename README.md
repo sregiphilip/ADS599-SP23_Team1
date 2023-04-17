@@ -69,6 +69,9 @@ The app folder contains a python file and requirements file that is used by stre
 ### data
 The data folder contains the csv file of the UCI MLE repository dataset used for this analysis. [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Census+Income)
 
+### reports
+The reports folder contains a pdf article detailing the purpose of this application and the objective we were attempting solve. Please refer to the article to understand the decision making process of this application.
+
 
 ## **References**
 
