@@ -24,7 +24,7 @@ Conversion notes:
 
 
 # 
-**Project: Classifying Non Profit Donor Strategy from Cultivating Volunteers**
+**Project: Classifying Non Profit Donor Strategy for Cultivating Volunteers**
 
 
 ## 
@@ -34,7 +34,8 @@ Conversion notes:
 ---
 
 
-## **Overview**
+
+## **Project Description**
 
 This application used supervised learning techniques to classify potential non profit donors as midlevel or high-level donors. The applcation aims to allow nonprofits to better compete for the attention of highlevel donors, many of which can provide tremendous benefits when relationships are cultivated personably, and allow organizations to better allocate their time for fundraising ultimately to help more people. 
 
@@ -44,22 +45,30 @@ The dataset for this project originates from the [UCI Machine Learning Repositor
 
 In this dataset, the income field is used to determine if an individual is likely to be a high-level or midlevel donor. Individuals with an income greater than $50,000 are determined to be potential high-level donors and all other individuals are determined to be potential midlevel donors. 
 
+## How to use this application
+The application is hosted on streamlit.io and available to all users with a web browser without any installation. <https://sregiphilip-ads599-sp23-team1-appdonor-app-a7oh1p.streamlit.app>
+The application asks for basic information about an individual and will return a classification of either midlevel or high-level to describe the predicted donor type of that individual.
 
-## **EDA and Pre-Processing**
+The code and whitepaper of how this application was developed is contained in the main.ipynb jupyter notebook file. The live code used for the deployed application is contained in the app folder.
 
-There are 48842 observations and 15 features in the dataset. 
+## **Table of Contents**
 
-The features that are available are age, workclass, fnlwgt, education, education-num, marital-status, occupation, relationship, race, sex, capital-gain, capital-loss, hours-per-week, native-country, and income. The exploratory data analysis includes exploring the data types of the dataset and checking the null values. The dataset did not have any null values but instead had ”?” in some of the columns like work-class and native-country. As the number of '?' values are relatively low compared to the length of the dataframe, those values are dropped. Columns like 'fnlwgt', 'education-num', 'capital-gain', 'capital-loss', 'hours-per-week', ‘occupation', ’relationship’, and ‘race’ are all dropped which are not relevant, or valuable.  After dropping the irrelevant observation and features we now have 45232 observations with 7 features. The target variable ‘income’ shows an imbalance with the mid-level and high-level income which will be addressed in the modeling phase. The age ranges from 17 years to 90 years and the histogram shows a right skew with a large proportion of the individuals on the younger side of the range with the 50% percentile at 37 years old. The work-class, native-country, and marital status have too many categories; similar classes in these categorical features are combined in order to make the results more interpretable. 
+### Code Library Folder
+Within the Code Library folder, you will find jupyter notebook files which contain code that was used for exploration and development of the application. 
 
+**EDA_PreProcessing.ipynb** - a jupyter notebook file containing python code detailing the exploratory data analysis and preprocessing steps for this dataset. 
 
-## **Modeling**
+**Modeling.ipynb** - a jupyter notebook file containing python code detailing the model building and evaluation steps of this application.
 
-To build our desired solution for donor selection, we   trained   and   tuned   several   classification models that would be able to consider characteristics of a given individual and predict whether they are likely to be a high-level or mid-level donor. The models were trained using differing classification techniques that include logistic regression, decision trees, random forest, naïve bayes, and  K nearest neighbor.  Each  of these models were trained using the partitioned training  data which  consists  of  80%  of  the original dataset. The models were then evaluated with the remaining  20%  hold out test data. Furthermore, each of these models had different hyperparameters   that   were   evaluated   and   tuned with different user selected values, ultimately to better fit the data.
+###  Image Folder
+The image folder contains various pdf images of plots that were deemed to be significant during the exploratory data analysis of the dataset. These images are for reference to understand the dataset that was used.
 
+### app
+The app folder contains a python file and requirements file that is used by streamlit.io to deploy our naive bayes classification model. These files are essential for streamlit.io to launch our application.
 
-## **Model Outcome and Deployment**
+### data
+The data folder contains the csv file of the UCI MLE repository dataset used for this analysis. [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Census+Income)
 
-After the model building and tuning with the five different classification techniques, the best performing models of each technique were then evaluated and compared against each other using a selection performance metrics that include recall, F1, accuracy, precision, and kappa, in that order of significance. After calculating the performance metrics of each of the five models,  the naïve bayes model was chosen given that it had the highest score for recall and the second highest score for F1. Naive Bayes was used to deploy an App, which allows a user to input basic information about an individual, and will then predict if the individual is likely to be a high level or mid level donor.
 
 ## **References**
 
